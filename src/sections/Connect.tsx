@@ -2,12 +2,12 @@ import React, { forwardRef } from 'react'
 
 interface Props {}
 
-const Skills = forwardRef<HTMLDivElement>((props, ref) => {
+const Connect = forwardRef<HTMLDivElement>((props: Props, ref) => {
     return (
         <div ref={ref}>
-            Skills
+            Connect
         </div>
     )
 })
 
-export default Skills
+export default Connect

@@ -1,13 +1,9 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
 interface Props {}
 
-const Experience = (props: Props) => {
-    return (
-        <div>
-            Experience
-        </div>
-    )
-}
+const Experience = forwardRef<HTMLDivElement>((props: Props, ref) => {
+    return <div ref={ref}>Experience</div>
+})
 
-export default Experience   
+export default Experience

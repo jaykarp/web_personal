@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { useRef } from 'react'
 
 interface Props {}
 
-const Footer = (props: Props) => {
+const Footer = React.forwardRef<HTMLDivElement>((props, ref) => {
     return (
-        <div>
+        <div ref={ref}>
             Footer
         </div>
     )
-}
+})
 
 export default Footer

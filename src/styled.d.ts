@@ -4,6 +4,17 @@ declare module 'styled-components' {
     export interface DefaultTheme {
         borderRadius: string, 
         boxShadow: string,
+        fonts: {
+            header: {
+                family: string,
+            },
+            body: {
+                family: string,
+            },
+            small: string,
+            medium: string,
+            large: string,
+        }
         colors: {
             background: string,
             light: string,
@@ -12,6 +23,10 @@ declare module 'styled-components' {
             accent: string,
             black: string,
             white: string,
+        },
+        sizes: {
+            small: string,
+            medium: string,
         }
     }
 }
