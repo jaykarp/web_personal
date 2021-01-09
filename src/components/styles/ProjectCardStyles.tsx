@@ -104,14 +104,14 @@ export const MoreContainer = styled.div`
     }) => `
         font-family: ${family};
         font-size: ${xsmall};
-        &:hover {
-            transform: translateX(2px); 
-        }
     `}
     margin: 0.3rem 0;
     display: flex;
     transition: all 0.2s;
     cursor: pointer;
+    &:hover {
+        transform: translateX(2px);
+    }
 `
 
 export const Arrow = styled.div``

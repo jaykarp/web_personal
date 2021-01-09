@@ -6,6 +6,7 @@ export const ProjectsContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 3rem;
+    margin: 4rem 0;
 `
 
 export const ProjectCardContainer = styled.div`

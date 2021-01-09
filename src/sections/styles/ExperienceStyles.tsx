@@ -8,8 +8,9 @@ export const ExperienceContainer = styled.div`
     }) => `
         background: ${background};
     `}
-    display: flex
+    display: flex;
     flex-direction: column;
+    margin: 4rem 0;
 `
 
 export const ExperienceHeader = styled.div`

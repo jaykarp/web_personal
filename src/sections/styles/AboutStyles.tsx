@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const AboutContainer = styled.div`
     padding: 20px 0;
     display: flex;
+    margin: 4rem 0;
 `
 
 export const CloudContainer = styled.div`

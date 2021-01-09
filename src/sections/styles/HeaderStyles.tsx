@@ -6,7 +6,7 @@ import styled from 'styled-components/macro'
 export const HeaderContainer = styled.div`
     display: flex;
     max-width: 1440px;
-    padding 0 2rem;
+    padding: 0 2rem;
     background: ${({
         theme: {
             colors: { background },

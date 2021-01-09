@@ -48,6 +48,17 @@ export const CollapseHeader = styled.div`
 `
 
 export const CollapseClose = styled.div`
+    ${({
+        theme: {
+            fonts: {
+                body: { family },
+            },
+            colors: { dark },
+        },
+    }) => `
+        color: ${dark};
+        font-family: ${family};
+    `}
     cursor: pointer;
 `
 

@@ -1,10 +1,5 @@
 import React from 'react'
-import gruvbox from 'react-syntax-highlighter/dist/esm/styles/hljs/gruvbox-dark'
-import atom1 from 'react-syntax-highlighter/dist/esm/styles/hljs/atom-one-dark'
 import a11yDark from 'react-syntax-highlighter/dist/esm/styles/prism/a11y-dark'
-import vscDarkPlus from 'react-syntax-highlighter/dist/esm/styles/prism/vsc-dark-plus'
-import cb from 'react-syntax-highlighter/dist/esm/styles/prism/cb'
-import twilight from 'react-syntax-highlighter/dist/esm/styles/prism/twilight'
 
 import { CodeContainer, CodeHeader, Dot, StyledCode } from './styles/CodeStyles'
 
