@@ -66,7 +66,7 @@ const Projects = forwardRef<HTMLDivElement>((props: Props, ref) => {
                     }
                     code={parsort_code}
                     language={'haskell'}
-                    tags={['Parallel Programming']}
+                    tags={['Parallel', 'Functional']}
                     color={'#7C9A8F'}
                     onClick={() =>
                         setOpen((open) =>
@@ -89,7 +89,7 @@ const Projects = forwardRef<HTMLDivElement>((props: Props, ref) => {
                 />
             </ProjectCardContainer>
             <CollapseContainer>
-                <Collapse open={open} />
+                <Collapse open={open} setOpen={setOpen} />
             </CollapseContainer>
         </ProjectsContainer>
     )

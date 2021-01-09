@@ -72,7 +72,6 @@ type CardProps = {
 export const CardTag = styled.div<CardProps>`
     ${({
         theme: {
-            colors: { medium, dark },
             fonts: {
                 body: { family },
                 xsmall,
@@ -91,7 +90,7 @@ export const CardTag = styled.div<CardProps>`
     color: white;
     white-space: nowrap;
     text-overflow: ellipsis;
-    margin: 0.3rem 0;
+    margin: 0.3rem 0.4rem 0.3rem 0;
 `
 
 export const MoreContainer = styled.div`
@@ -112,6 +111,7 @@ export const MoreContainer = styled.div`
     margin: 0.3rem 0;
     display: flex;
     transition: all 0.2s;
+    cursor: pointer;
 `
 
 export const Arrow = styled.div``
@@ -130,5 +130,4 @@ export const More = styled.div<CardProps>`
         font-size: ${xsmall};
         border-bottom: 3px solid ${color};
     `}
-    cursor: pointer;
 `

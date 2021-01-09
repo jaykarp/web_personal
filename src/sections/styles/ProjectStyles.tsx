@@ -29,6 +29,8 @@ export const ProjectsHeader = styled.div`
     `}
 `
 export const CollapseContainer = styled.div`
-    position: relative;
     display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 6rem;
 `
