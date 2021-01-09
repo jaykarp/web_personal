@@ -16,7 +16,7 @@ const Intro = (props: Props) => {
         <IntroContainer>
             <IntroTextContainer>
                 <IntroText>Hi, I'm</IntroText>
-                <IntroTextAccent>&nbsp;Jay</IntroTextAccent>
+                <IntroTextAccent>&nbsp;Jay.</IntroTextAccent>
             </IntroTextContainer>
             <IntroImgContainer>
                 <IntroImg src={cartoon} />

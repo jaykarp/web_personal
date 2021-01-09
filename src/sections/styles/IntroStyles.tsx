@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 export const IntroContainer = styled.div`
     height: calc(100vh - 4.2rem);
@@ -29,6 +29,8 @@ export const IntroImgContainer = styled.div`
 export const IntroImg = styled.img`
     width: 60vh;
     max-width: 500px;
+    min-height: 275px;
+    min-width: 280px;
 `
 
 export const IntroText = styled.div`

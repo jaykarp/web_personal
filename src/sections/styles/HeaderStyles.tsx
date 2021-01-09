@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 // TODO:
 // Add media query and hamburger header for theme.sizes.small
@@ -6,7 +6,7 @@ import styled from 'styled-components'
 export const HeaderContainer = styled.div`
     display: flex;
     max-width: 1440px;
-    padding 0 1rem;
+    padding 0 2rem;
     background: ${({
         theme: {
             colors: { background },

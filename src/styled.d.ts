@@ -3,6 +3,7 @@ import 'styled-components'
 declare module 'styled-components' {
     export interface DefaultTheme {
         borderRadius: string, 
+        borderRadiusSmall: strin,
         boxShadow: string,
         fonts: {
             header: {
@@ -11,6 +12,7 @@ declare module 'styled-components' {
             body: {
                 family: string,
             },
+            xsmall: string,
             small: string,
             medium: string,
             large: string,
