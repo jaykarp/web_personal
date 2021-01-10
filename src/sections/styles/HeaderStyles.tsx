@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components/macro'
 import { Squash as _Hamburger } from 'hamburger-react'
-import { Collapse as _Collapse } from 'react-collapse'
 
 export const Sections = styled.div`
     display: flex;

@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react'
+import React, { forwardRef, useEffect } from 'react'
 import hs from '../assets/headshot2.svg'
 import Shape from '../components/Shape'
 import {
@@ -17,6 +17,22 @@ import { WidthManager } from './styles/ConnectStyles'
 interface Props {}
 
 const Connect = forwardRef<HTMLDivElement>((props: Props, ref) => {
+    const email = `amxrMjIyNUBjb2x1bWJpYS5lZHU=`
+
+    useEffect(() => {
+        const links = document.querySelectorAll<HTMLElement>(
+            `[data-gen='email']`
+        )
+        links.forEach((l) => {
+            l.onmouseover = l.ontouchstart = () =>
+                l.setAttribute('href', `mailto:${atob(email)}`)
+        })
+        return () => {
+            links.forEach((l) => {
+                l.onmouseover = l.ontouchstart = () => null
+            })
+        }
+    }, [])
     return (
         <WidthManager>
             <ConnectContainer ref={ref}>
@@ -30,15 +46,23 @@ const Connect = forwardRef<HTMLDivElement>((props: Props, ref) => {
                 <ConnectHeader> Connect </ConnectHeader>
                 <ContentContainer>
                     <LinksContainer>
-                        <LinkContainer href={'#'}>
+                        <LinkContainer href={''} data-gen={'email'}>
                             <Arrow indent={'0rem'}>&#129106;&nbsp;</Arrow>
                             <Link color={'#456268'}>email.</Link>
                         </LinkContainer>
-                        <LinkContainer href={'#'}>
+                        <LinkContainer
+                            href={'https://www.linkedin.com/in/jaykarp/'}
+                            target={'_black'}
+                            rel={'noreferrer noopener'}
+                        >
                             <Arrow indent={'1.5rem'}>&#129106;&nbsp;</Arrow>
                             <Link color={'#FF8A00'}>linkedin.</Link>
                         </LinkContainer>
-                        <LinkContainer href={'#'}>
+                        <LinkContainer
+                            href={'https://www.github.com/jaykarp'}
+                            target={'_black'}
+                            rel={'noreferrer noopener'}
+                        >
                             <Arrow indent={'3rem'}>&#129106;&nbsp;</Arrow>
                             <Link color={'#D0E8F2'}>github.</Link>
                         </LinkContainer>
