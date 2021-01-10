@@ -11,8 +11,6 @@ import Projects from './sections/Projects'
 import Connect from './sections/Connect'
 import Footer from './sections/Footer'
 
-import { Container } from './styles/AppStyles'
-
 smoothscroll.polyfill()
 
 const theme: DefaultTheme = {

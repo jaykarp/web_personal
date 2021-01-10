@@ -29,13 +29,13 @@ const Skills = forwardRef<HTMLDivElement>((_, ref) => {
     return (
         <WidthManager>
             <SkillsContainer ref={ref}>
-                <Shape
+                {/* <Shape
                     shape={'circle'}
                     size={'5rem'}
                     rotation={'120deg'}
                     top={'12%'}
                     left={'-28%'}
-                />
+                /> */}
                 <Shape
                     shape={'square'}
                     size={'6rem'}
@@ -44,19 +44,19 @@ const Skills = forwardRef<HTMLDivElement>((_, ref) => {
                     left={'20%'}
                 />
                 <Shape
-                    shape={'square'}
+                    shape={'circle'}
                     size={'4rem'}
                     rotation={'20deg'}
-                    top={'40%'}
+                    top={'35%'}
                     left={'-10%'}
                 />
-                <Shape
+                {/* <Shape
                     shape={'circle'}
                     size={'5rem'}
                     rotation={'290deg'}
                     top={'50%'}
                     left={'20%'}
-                />
+                /> */}
                 <Shape
                     shape={'triangle'}
                     size={'3rem'}

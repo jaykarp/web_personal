@@ -57,8 +57,12 @@ export const GridLanguages = styled.div`
     grid-area: Languages;
     display: flex;
     align-items: flex-start;
-    // justify-content: center;
+
     margin-right: 20px;
+    @media (max-width: 800px) {
+        justify-content: center;
+        margin-right: -50%;
+    }
 `
 
 export const LanguagesContainer = styled.div`
@@ -134,6 +138,13 @@ export const FrameworksContainer = styled.div`
     justify-content: center;
     padding: 20px 20px 10px 20px;
     margin-left: 110px;
+    @media (max-width: 800px) {
+        justify-content: center;
+        margin-right: -50%;
+        margin-left: 40px;
+        margin-top: 36px;
+        z-index: 0;
+    }
 `
 
 export const LRContainer = styled.div`

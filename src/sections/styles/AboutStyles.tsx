@@ -18,6 +18,9 @@ export const AboutContainer = styled.div`
     display: flex;
     margin: 1rem 0 -8.125rem 0;
     position: relative;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 export const CloudContainer = styled.div`
@@ -26,6 +29,10 @@ export const CloudContainer = styled.div`
     justify-content: flex-end;
     flex: 1 1 0;
     z-index: 100;
+    @media (max-width: 768px) {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
 `
 
 export const TextContainer = styled.div`

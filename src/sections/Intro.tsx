@@ -23,6 +23,8 @@ const Intro = (props: Props) => {
                     rotation={'25deg'}
                     top={'5%'}
                     left={'-35%'}
+                    xleft={'-35%'}
+                    xtop={'10%'}
                 />
                 <Shape
                     shape={'circle'}
@@ -30,6 +32,8 @@ const Intro = (props: Props) => {
                     rotation={'75deg'}
                     top={'65%'}
                     left={'2%'}
+                    xleft={'5%'}
+                    xtop={'55%'}
                 />
                 <Shape
                     shape={'square'}

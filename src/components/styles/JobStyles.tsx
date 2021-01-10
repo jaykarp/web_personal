@@ -10,6 +10,9 @@ export const JobContainer = styled.div<JobProps>`
     display: flex;
     justify-content: center;
     margin: 2rem 6rem;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 export const JobHeader = styled.div<JobProps>`
@@ -34,6 +37,9 @@ export const JobImgContainer = styled.div<JobProps>`
     display: flex;
     align-items: center;
     flex: 1 1 0;
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
 `
 
 export const JobImgBackground = styled.div<JobProps>`
@@ -87,6 +93,9 @@ export const JobDescription = styled.div`
     `}
     margin: 1rem 0;
     text-align: justify;
+    @media (max-width: 800px) {
+        font-size: 1rem;
+    }
 `
 
 export const JobLanguages = styled.div<JobProps>`

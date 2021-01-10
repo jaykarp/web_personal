@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { forwardRef, useEffect, useRef, useState } from 'react'
 // import { Collapse as Coll } from 'react-collapse'
 import {
     Coll,
@@ -18,7 +18,7 @@ interface Props {
     setOpen: React.Dispatch<React.SetStateAction<boolean[]>>
 }
 
-const Collapse = ({ open, setOpen }: Props) => {
+const Collapse = ({ open, setOpen }: Props, ref: any) => {
     const [copen, setCopen] = useState([false, false, false])
     const isFirst = useRef(true)
     const isAnimating = useRef(false)
@@ -43,7 +43,7 @@ const Collapse = ({ open, setOpen }: Props) => {
     }, [open, copen])
 
     return (
-        <CollapseContainer>
+        <CollapseContainer ref={ref}>
             <Coll isOpened={copen[0]}>
                 <CollapseWrapper>
                     <HeaderContainer>
@@ -186,4 +186,4 @@ const Collapse = ({ open, setOpen }: Props) => {
     )
 }
 
-export default Collapse
+export default forwardRef<HTMLDivElement, Props>(Collapse)

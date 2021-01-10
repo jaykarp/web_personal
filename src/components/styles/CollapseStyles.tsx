@@ -14,7 +14,8 @@ export const CollapseContainer = styled.div`
         box-shadow: ${boxShadow};
     `}
     display: grid;
-    width: 75%;
+    width: 75vw;
+    max-width: 1000px;
 `
 
 export const Coll = styled(_Collapse)`

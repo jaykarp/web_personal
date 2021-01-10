@@ -13,9 +13,19 @@ interface Props {
     rotation: string
     top: string
     left: string
+    xtop?: string
+    xleft?: string
 }
 
-const Shape = ({ shape, size, rotation, top, left }: Props) => {
+const Shape = ({
+    shape,
+    size,
+    rotation,
+    top,
+    left,
+    xtop = top,
+    xleft = left,
+}: Props) => {
     switch (shape) {
         case 'square':
             return (
@@ -25,6 +35,8 @@ const Shape = ({ shape, size, rotation, top, left }: Props) => {
                     size={size}
                     top={top}
                     left={left}
+                    xtop={xtop}
+                    xleft={xleft}
                 />
             )
         case 'triangle':
@@ -35,6 +47,8 @@ const Shape = ({ shape, size, rotation, top, left }: Props) => {
                     size={size}
                     top={top}
                     left={left}
+                    xtop={xtop}
+                    xleft={xleft}
                 />
             )
         case 'pentagon':
@@ -45,6 +59,8 @@ const Shape = ({ shape, size, rotation, top, left }: Props) => {
                     size={size}
                     top={top}
                     left={left}
+                    xtop={xtop}
+                    xleft={xleft}
                 />
             )
         case 'hexagon':
@@ -55,6 +71,8 @@ const Shape = ({ shape, size, rotation, top, left }: Props) => {
                     size={size}
                     top={top}
                     left={left}
+                    xtop={xtop}
+                    xleft={xleft}
                 />
             )
         default:
@@ -65,6 +83,8 @@ const Shape = ({ shape, size, rotation, top, left }: Props) => {
                     size={size}
                     top={top}
                     left={left}
+                    xtop={xtop}
+                    xleft={xleft}
                 />
             )
     }

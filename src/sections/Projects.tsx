@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react'
+import React, { forwardRef, useRef, useState } from 'react'
 import Collapse from '../components/Collapse'
 import ProjectCard from '../components/ProjectCard'
 import Shape from '../components/Shape'
@@ -40,8 +40,35 @@ const paxos_code = `p1PreparePhase := func(s *base.State) bool {
   return valid
 }`
 
+const isInViewport = (el: HTMLDivElement) => {
+    const rect = el.getBoundingClientRect()
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+    )
+}
+
 const Projects = forwardRef<HTMLDivElement>((props: Props, ref) => {
     const [open, setOpen] = useState([false, false, false])
+    const collapseRef = useRef(document.createElement('div'))
+    const checkOpen = (idx: number) => {
+        setOpen((open) => open.map((o, i) => i === idx))
+    }
+
+    const handleClick = (idx: number) => {
+        if (isInViewport(collapseRef.current)) {
+            checkOpen(idx)
+        } else {
+            if (!open[idx]) {
+                collapseRef.current.scrollIntoView({ behavior: 'smooth' })
+            }
+            setTimeout(() => checkOpen(idx), 500)
+        }
+    }
 
     return (
         <>
@@ -80,7 +107,7 @@ const Projects = forwardRef<HTMLDivElement>((props: Props, ref) => {
                         size={'6rem'}
                         rotation={'44deg'}
                         top={'80%'}
-                        left={'35%'}
+                        left={'45%'}
                     />
                     <ProjectsHeader>Projects</ProjectsHeader>
                     <ProjectCardContainer>
@@ -93,11 +120,7 @@ const Projects = forwardRef<HTMLDivElement>((props: Props, ref) => {
                             language={'javascript'}
                             tags={['UI & UX']}
                             color={'#779095'}
-                            onClick={() =>
-                                setOpen((open) =>
-                                    open.map((o, i) => (i === 0 ? true : false))
-                                )
-                            }
+                            onClick={() => handleClick(0)}
                         />
                         <ProjectCard
                             title={'par-sort.'}
@@ -108,11 +131,7 @@ const Projects = forwardRef<HTMLDivElement>((props: Props, ref) => {
                             language={'haskell'}
                             tags={['Parallel', 'Functional']}
                             color={'#7C9A8F'}
-                            onClick={() =>
-                                setOpen((open) =>
-                                    open.map((o, i) => (i === 1 ? true : false))
-                                )
-                            }
+                            onClick={() => handleClick(1)}
                         />
                         <ProjectCard
                             title={'paxos checker.'}
@@ -123,15 +142,15 @@ const Projects = forwardRef<HTMLDivElement>((props: Props, ref) => {
                             language={'go'}
                             tags={['Distributed Systems']}
                             color={'#57838C'}
-                            onClick={() =>
-                                setOpen((open) =>
-                                    open.map((o, i) => (i === 2 ? true : false))
-                                )
-                            }
+                            onClick={() => handleClick(2)}
                         />
                     </ProjectCardContainer>
                     <CollapseContainer>
-                        <Collapse open={open} setOpen={setOpen} />
+                        <Collapse
+                            open={open}
+                            setOpen={setOpen}
+                            ref={collapseRef}
+                        />
                     </CollapseContainer>
                 </ProjectsContainer>
             </WidthManager>

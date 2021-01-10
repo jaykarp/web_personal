@@ -20,6 +20,9 @@ export const IntroContainer = styled.div`
     min-height: 400px;
     display: flex;
     justify-content: center;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `
 
 export const IntroTextContainer = styled.div`
@@ -28,6 +31,9 @@ export const IntroTextContainer = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 100;
+    @media (max-width: 768px) {
+        flex: none;
+    }
 `
 
 export const IntroImgContainer = styled.div`
@@ -36,6 +42,10 @@ export const IntroImgContainer = styled.div`
     align-items: center;
     justify-content: flex-start;
     z-index: 100;
+    @media (max-width: 768px) {
+        flex: none;
+        justify-content: center;
+    }
 `
 
 export const IntroImg = styled.img`
@@ -43,6 +53,9 @@ export const IntroImg = styled.img`
     max-width: 500px;
     min-height: 275px;
     min-width: 280px;
+    @media (max-width: 768px) {
+        max-width: 400px;
+    }
 `
 
 export const IntroText = styled.div`
