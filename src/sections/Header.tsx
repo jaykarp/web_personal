@@ -6,7 +6,15 @@ import {
     HeaderItem,
     WidthManager,
     Filler,
+    Hamburger,
+    HamburgerContainer,
+    Sections,
+    SmallItemContainer,
+    HeaderTop,
+    HeaderNav,
 } from './styles/HeaderStyles'
+import { Collapse } from 'react-collapse'
+import './styles/HeaderStyles.css'
 
 interface Props {
     refs: {
@@ -17,8 +25,21 @@ interface Props {
     }
 }
 
+const scrollToTargetAdjusted = (el: HTMLDivElement) => {
+    const headerOffset = 100
+    const elementPosition = el.getBoundingClientRect().top
+    const offsetPosition = elementPosition - headerOffset
+    const windowPosition = window.pageYOffset
+
+    window.scrollTo({
+        top: windowPosition + offsetPosition,
+        behavior: 'smooth',
+    })
+}
+
 const Header = ({ refs }: Props) => {
     const [isTop, setIsTop] = useState(true)
+    const [open, setOpen] = useState(false)
 
     useEffect(() => {
         window.onscroll = () => {
@@ -37,33 +58,91 @@ const Header = ({ refs }: Props) => {
         if (ref.current == null) {
             return
         }
-        ref.current.scrollIntoView({ behavior: 'smooth' })
+        scrollToTargetAdjusted(ref.current)
+    }
+
+    const sscrollTo = (ref: React.RefObject<HTMLDivElement>) => {
+        if (ref.current == null) {
+            return
+        }
+        setOpen(false)
+        scrollToTargetAdjusted(ref.current)
     }
 
     return (
         <>
             <Filler />
-            <WidthManager isTop={isTop}>
+            <WidthManager isTop={isTop && !open}>
                 <HeaderContainer>
-                    <LogoContainer>
-                        <HeaderItem>jay karp</HeaderItem>
-                    </LogoContainer>
-                    <ItemContainer>
-                        <HeaderItem onClick={() => scrollTo(refs.skillsRef)}>
-                            skills
-                        </HeaderItem>
-                        <HeaderItem
-                            onClick={() => scrollTo(refs.experienceRef)}
+                    <HeaderTop>
+                        <LogoContainer>
+                            <HeaderItem>jay karp</HeaderItem>
+                        </LogoContainer>
+                        <HamburgerContainer>
+                            <Hamburger
+                                toggled={open}
+                                toggle={setOpen}
+                                easing={'ease-in-out'}
+                                rounded
+                            />
+                        </HamburgerContainer>
+                        <ItemContainer>
+                            <HeaderItem
+                                onClick={() => scrollTo(refs.skillsRef)}
+                            >
+                                skills
+                            </HeaderItem>
+                            <HeaderItem
+                                onClick={() => scrollTo(refs.experienceRef)}
+                            >
+                                experience
+                            </HeaderItem>
+                            <HeaderItem
+                                onClick={() => scrollTo(refs.projectsRef)}
+                            >
+                                projects
+                            </HeaderItem>
+                            <HeaderItem
+                                onClick={() => scrollTo(refs.connectRef)}
+                            >
+                                connect
+                            </HeaderItem>
+                        </ItemContainer>
+                    </HeaderTop>
+                    <HeaderNav>
+                        <Collapse
+                            isOpened={open}
+                            theme={{
+                                collapse: 'headercollapse',
+                                content: 'headercontent',
+                            }}
                         >
-                            experience
-                        </HeaderItem>
-                        <HeaderItem onClick={() => scrollTo(refs.projectsRef)}>
-                            projects
-                        </HeaderItem>
-                        <HeaderItem onClick={() => scrollTo(refs.connectRef)}>
-                            connect
-                        </HeaderItem>
-                    </ItemContainer>
+                            <SmallItemContainer>
+                                <HeaderItem
+                                    onClick={() => sscrollTo(refs.skillsRef)}
+                                >
+                                    skills
+                                </HeaderItem>
+                                <HeaderItem
+                                    onClick={() =>
+                                        sscrollTo(refs.experienceRef)
+                                    }
+                                >
+                                    experience
+                                </HeaderItem>
+                                <HeaderItem
+                                    onClick={() => sscrollTo(refs.projectsRef)}
+                                >
+                                    projects
+                                </HeaderItem>
+                                <HeaderItem
+                                    onClick={() => sscrollTo(refs.connectRef)}
+                                >
+                                    connect
+                                </HeaderItem>
+                            </SmallItemContainer>
+                        </Collapse>
+                    </HeaderNav>
                 </HeaderContainer>
             </WidthManager>
         </>

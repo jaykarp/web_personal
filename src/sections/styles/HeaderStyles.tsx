@@ -1,4 +1,24 @@
 import styled, { css } from 'styled-components/macro'
+import { Squash as _Hamburger } from 'hamburger-react'
+import { Collapse as _Collapse } from 'react-collapse'
+
+export const Sections = styled.div`
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+`
+
+export const Hamburger = styled(_Hamburger)``
+
+export const HamburgerContainer = styled.div`
+    display: none;
+    padding: 10px;
+    justify-content: flex-end;
+    flex: 1;
+    @media (max-width: 800px) {
+        display: flex;
+    }
+`
 
 export const Filler = styled.div`
     width: 100%;
@@ -17,7 +37,9 @@ export const WidthManager = styled.div<ManagerProps>`
         isTop,
     }) => css`
         background: ${background};
-        box-shadow: ${isTop ? '' : '0px 2px 2px rgba(0, 0, 0, 0.1)'};
+        box-shadow: ${isTop
+            ? `0px 6px 6px ${background}`
+            : '0px 2px 2px rgba(0, 0, 0, 0.1)'};
     `};
     width: 100%;
     display: flex;
@@ -32,17 +54,48 @@ export const HeaderContainer = styled.div`
     max-width: 1200px;
     width: 100%;
     padding: 0 2rem;
-    height: 4.2rem;
+    /* height: 4.2rem; */
+    position: relative;
+    flex-direction: column;
+`
+
+export const HeaderTop = styled.div`
+    display: flex;
+    width: 100%;
+`
+
+export const HeaderNav = styled.div`
+    flex: 1;
 `
 
 export const LogoContainer = styled.div`
     display: flex;
 `
 
+export const SmallItemContainer = styled.div`
+    display: none;
+    justify-content: flex-end;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 800px) {
+        display: flex;
+        width: 100%;
+        background: ${({
+            theme: {
+                colors: { background },
+            },
+        }) => background};
+    }
+`
+
 export const ItemContainer = styled.div`
     display: flex;
     justify-content: flex-end;
     flex: 1;
+    @media (max-width: 800px) {
+        display: none;
+    }
 `
 export const HeaderItem = styled.div`
     ${({ theme: { fonts } }) => css`
