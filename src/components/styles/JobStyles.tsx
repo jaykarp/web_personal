@@ -5,6 +5,7 @@ type JobProps = {
 }
 
 export const JobContainer = styled.div<JobProps>`
+    z-index: 100;
     flex-direction: ${({ isLeft }) => (isLeft ? 'row-reverse' : 'row')};
     display: flex;
     justify-content: center;

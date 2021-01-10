@@ -2,10 +2,12 @@ import React, { forwardRef, useState } from 'react'
 import Collapse from '../components/Collapse'
 import ProjectCard from '../components/ProjectCard'
 import {
+    WidthManager,
     CollapseContainer,
     ProjectCardContainer,
     ProjectsContainer,
     ProjectsHeader,
+    ProjectSpacer,
 } from './styles/ProjectStyles'
 
 interface Props {}
@@ -22,10 +24,10 @@ ReactDOM.render(
 const parsort_code = `shuffle :: V.Vector a -> IO (V.Vector a)
 shuffle v = do
  let n = V.length v - 1
- js <- V.forM (V.enumFromTo 0 n) $ \i -> randomRIO (i, n)
+ js <- V.forM (V.enumFromTo 0 n) $ \\i -> randomRIO (i, n)
  return $ V.create $ do
     o <- V.thaw v
-    forM_ [1..n] $ \i -> M.swap o i (js!i)
+    forM_ [1..n] $ \\i -> M.swap o i (js!i)
     return o`
 
 const paxos_code = `p1PreparePhase := func(s *base.State) bool {
@@ -41,57 +43,64 @@ const Projects = forwardRef<HTMLDivElement>((props: Props, ref) => {
     const [open, setOpen] = useState([false, false, false])
 
     return (
-        <ProjectsContainer ref={ref}>
-            <ProjectsHeader>Projects</ProjectsHeader>
-            <ProjectCardContainer>
-                <ProjectCard
-                    title={'musely.'}
-                    description={
-                        'a music note taking tool for the average student'
-                    }
-                    code={musely_code}
-                    language={'javascript'}
-                    tags={['UI & UX']}
-                    color={'#779095'}
-                    onClick={() =>
-                        setOpen((open) =>
-                            open.map((o, i) => (i === 0 ? true : false))
-                        )
-                    }
-                />
-                <ProjectCard
-                    title={'par-sort.'}
-                    description={
-                        'parallel functional sorinting implementations in haskell'
-                    }
-                    code={parsort_code}
-                    language={'haskell'}
-                    tags={['Parallel', 'Functional']}
-                    color={'#7C9A8F'}
-                    onClick={() =>
-                        setOpen((open) =>
-                            open.map((o, i) => (i === 1 ? true : false))
-                        )
-                    }
-                />
-                <ProjectCard
-                    title={'paxos checker.'}
-                    description={'distributed, stateful paxos error checking'}
-                    code={paxos_code}
-                    language={'go'}
-                    tags={['Distributed Systems']}
-                    color={'#57838C'}
-                    onClick={() =>
-                        setOpen((open) =>
-                            open.map((o, i) => (i === 2 ? true : false))
-                        )
-                    }
-                />
-            </ProjectCardContainer>
-            <CollapseContainer>
-                <Collapse open={open} setOpen={setOpen} />
-            </CollapseContainer>
-        </ProjectsContainer>
+        <>
+            <WidthManager>
+                <ProjectsContainer ref={ref}>
+                    <ProjectsHeader>Projects</ProjectsHeader>
+                    <ProjectCardContainer>
+                        <ProjectCard
+                            title={'musely.'}
+                            description={
+                                'a music note taking tool for the average student'
+                            }
+                            code={musely_code}
+                            language={'javascript'}
+                            tags={['UI & UX']}
+                            color={'#779095'}
+                            onClick={() =>
+                                setOpen((open) =>
+                                    open.map((o, i) => (i === 0 ? true : false))
+                                )
+                            }
+                        />
+                        <ProjectCard
+                            title={'par-sort.'}
+                            description={
+                                'parallel functional sorinting implementations in haskell'
+                            }
+                            code={parsort_code}
+                            language={'haskell'}
+                            tags={['Parallel', 'Functional']}
+                            color={'#7C9A8F'}
+                            onClick={() =>
+                                setOpen((open) =>
+                                    open.map((o, i) => (i === 1 ? true : false))
+                                )
+                            }
+                        />
+                        <ProjectCard
+                            title={'paxos checker.'}
+                            description={
+                                'distributed, stateful paxos error checking'
+                            }
+                            code={paxos_code}
+                            language={'go'}
+                            tags={['Distributed Systems']}
+                            color={'#57838C'}
+                            onClick={() =>
+                                setOpen((open) =>
+                                    open.map((o, i) => (i === 2 ? true : false))
+                                )
+                            }
+                        />
+                    </ProjectCardContainer>
+                    <CollapseContainer>
+                        <Collapse open={open} setOpen={setOpen} />
+                    </CollapseContainer>
+                </ProjectsContainer>
+            </WidthManager>
+            <ProjectSpacer />
+        </>
     )
 })
 

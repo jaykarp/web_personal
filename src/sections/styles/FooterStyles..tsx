@@ -1,5 +1,16 @@
 import styled from 'styled-components/macro'
 
+export const WidthManager = styled.div`
+    background: ${({
+        theme: {
+            colors: { background },
+        },
+    }) => background};
+    width: 100%;
+    display: flex;
+    justify-content: center;
+`
+
 export const FooterContainer = styled.div`
     ${({
         theme: {
@@ -20,6 +31,7 @@ export const FooterContainer = styled.div`
     align-items: center;
     justify-content: center;
     padding: 1rem;
+    width: 100%;
 `
 
 export const FooterText = styled.div``

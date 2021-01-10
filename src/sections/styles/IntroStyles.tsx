@@ -1,15 +1,26 @@
 import styled from 'styled-components/macro'
 
-export const IntroContainer = styled.div`
-    height: calc(100vh - 4.2rem);
-    max-height: 775px;
-    min-height: 400px;
-    display: flex;
+export const WidthManager = styled.div`
     background: ${({
         theme: {
             colors: { background },
         },
     }) => background};
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+`
+
+export const IntroContainer = styled.div`
+    width: 100%;
+    max-width: 1200px;
+    height: calc(100vh - 4.2rem);
+    max-height: 775px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    z-index: 100;
 `
 
 export const IntroTextContainer = styled.div`

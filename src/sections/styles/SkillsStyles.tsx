@@ -1,6 +1,21 @@
 import styled from 'styled-components/macro'
 
+export const WidthManager = styled.div`
+    background: ${({
+        theme: {
+            colors: { white },
+        },
+    }) => white};
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    position: relative;
+`
+
 export const SkillsContainer = styled.div`
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
 `

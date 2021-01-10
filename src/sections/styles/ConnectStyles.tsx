@@ -1,9 +1,24 @@
 import styled from 'styled-components/macro'
 
+export const WidthManager = styled.div`
+    background: ${({
+        theme: {
+            colors: { background },
+        },
+    }) => background};
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+`
+
 export const ConnectContainer = styled.div`
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    margin: 4rem 0;
+    margin: 3rem 0 7rem 0;
+    z-index: 100;
 `
 
 export const ConnectHeader = styled.div`
@@ -21,6 +36,7 @@ export const ConnectHeader = styled.div`
         font-family: ${family};
     `}
     margin-left: 5rem;
+    margin-bottom: 2rem;
 `
 
 export const ContentContainer = styled.div`

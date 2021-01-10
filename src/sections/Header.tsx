@@ -1,10 +1,10 @@
 import React from 'react'
-import { Container } from '../styles/AppStyles'
 import {
     HeaderContainer,
     LogoContainer,
     ItemContainer,
     HeaderItem,
+    WidthManager,
 } from './styles/HeaderStyles'
 
 interface Props {
@@ -25,29 +25,27 @@ const Header = ({ refs }: Props) => {
     }
 
     return (
-        <HeaderContainer>
-            <LogoContainer>
-                <HeaderItem>jay karp</HeaderItem>
-            </LogoContainer>
-            <ItemContainer>
-                <HeaderItem onClick={() => scrollTo(refs.skillsRef)}>
-                    {' '}
-                    skills{' '}
-                </HeaderItem>
-                <HeaderItem onClick={() => scrollTo(refs.experienceRef)}>
-                    {' '}
-                    experience{' '}
-                </HeaderItem>
-                <HeaderItem onClick={() => scrollTo(refs.projectsRef)}>
-                    {' '}
-                    projects{' '}
-                </HeaderItem>
-                <HeaderItem onClick={() => scrollTo(refs.connectRef)}>
-                    {' '}
-                    connect{' '}
-                </HeaderItem>
-            </ItemContainer>
-        </HeaderContainer>
+        <WidthManager>
+            <HeaderContainer>
+                <LogoContainer>
+                    <HeaderItem>jay karp</HeaderItem>
+                </LogoContainer>
+                <ItemContainer>
+                    <HeaderItem onClick={() => scrollTo(refs.skillsRef)}>
+                        skills
+                    </HeaderItem>
+                    <HeaderItem onClick={() => scrollTo(refs.experienceRef)}>
+                        experience
+                    </HeaderItem>
+                    <HeaderItem onClick={() => scrollTo(refs.projectsRef)}>
+                        projects
+                    </HeaderItem>
+                    <HeaderItem onClick={() => scrollTo(refs.connectRef)}>
+                        connect
+                    </HeaderItem>
+                </ItemContainer>
+            </HeaderContainer>
+        </WidthManager>
     )
 }
 

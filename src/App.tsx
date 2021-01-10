@@ -53,23 +53,21 @@ const App = () => {
     const connectRef = useRef<HTMLDivElement>(null)
     return (
         <ThemeProvider theme={theme}>
-            <Container>
-                <Header
-                    refs={{
-                        skillsRef,
-                        experienceRef,
-                        projectsRef,
-                        connectRef,
-                    }}
-                />
-                <Intro />
-                <About />
-                <Skills ref={skillsRef} />
-                <Experience ref={experienceRef} />
-                <Projects ref={projectsRef} />
-                <Connect ref={connectRef} />
-                <Footer />
-            </Container>
+            <Header
+                refs={{
+                    skillsRef,
+                    experienceRef,
+                    projectsRef,
+                    connectRef,
+                }}
+            />
+            <Intro />
+            <About />
+            <Skills ref={skillsRef} />
+            <Experience ref={experienceRef} />
+            <Projects ref={projectsRef} />
+            <Connect ref={connectRef} />
+            <Footer />
         </ThemeProvider>
     )
 }

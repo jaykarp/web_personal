@@ -4,3 +4,7 @@ export const Container = styled.div`
     max-width: 1200px;
     width: 100%;
 `
+
+export const WidthManager = styled.div`
+    max-width: 1440px;
+`
