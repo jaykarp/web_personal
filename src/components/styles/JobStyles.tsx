@@ -36,7 +36,7 @@ export const JobImgContainer = styled.div<JobProps>`
     `}
     display: flex;
     align-items: center;
-    flex: 1 1 0;
+    flex: 1 1 auto;
     @media (max-width: 768px) {
         justify-content: center;
     }
@@ -76,7 +76,7 @@ export const JobDescriptionContainer = styled.div<JobProps>`
     `}
     display: flex;
     flex-direction: column;
-    flex: 2 1 0;
+    flex: 2 1 auto;
 `
 
 export const JobDescription = styled.div`

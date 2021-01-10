@@ -27,7 +27,7 @@ export const CloudContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex: 1 1 0;
+    flex: 1 1 auto;
     z-index: 100;
     @media (max-width: 768px) {
         justify-content: center;
@@ -39,7 +39,7 @@ export const TextContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1.5 1 0;
+    flex: 1.5 1 auto;
     z-index: 100;
 `
 

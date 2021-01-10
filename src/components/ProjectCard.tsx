@@ -57,7 +57,7 @@ const ProjectCard = ({
                     <Tags>{tags}</Tags>
                 </CardTagContainer>
                 <MoreContainer onClick={onClick}>
-                    <Arrow>&#129106;&nbsp;</Arrow>
+                    <Arrow>&rarr;&nbsp;</Arrow>
                     <More color={color}>more</More>
                 </MoreContainer>
             </Card>

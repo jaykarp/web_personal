@@ -47,7 +47,7 @@ const Connect = forwardRef<HTMLDivElement>((props: Props, ref) => {
                 <ContentContainer>
                     <LinksContainer>
                         <LinkContainer href={''} data-gen={'email'}>
-                            <Arrow indent={'0rem'}>&#129106;&nbsp;</Arrow>
+                            <Arrow indent={'0rem'}>&rarr;&nbsp;</Arrow>
                             <Link color={'#456268'}>email.</Link>
                         </LinkContainer>
                         <LinkContainer
@@ -55,7 +55,7 @@ const Connect = forwardRef<HTMLDivElement>((props: Props, ref) => {
                             target={'_black'}
                             rel={'noreferrer noopener'}
                         >
-                            <Arrow indent={'1.5rem'}>&#129106;&nbsp;</Arrow>
+                            <Arrow indent={'1.5rem'}>&rarr;&nbsp;</Arrow>
                             <Link color={'#FF8A00'}>linkedin.</Link>
                         </LinkContainer>
                         <LinkContainer
@@ -63,11 +63,15 @@ const Connect = forwardRef<HTMLDivElement>((props: Props, ref) => {
                             target={'_black'}
                             rel={'noreferrer noopener'}
                         >
-                            <Arrow indent={'3rem'}>&#129106;&nbsp;</Arrow>
+                            <Arrow indent={'3rem'}>&rarr;&nbsp;</Arrow>
                             <Link color={'#D0E8F2'}>github.</Link>
                         </LinkContainer>
-                        <LinkContainer href={'#'}>
-                            <Arrow indent={'4.5rem'}>&#129106;&nbsp;</Arrow>
+                        <LinkContainer
+                            href={''}
+                            target={'_black'}
+                            rel={'noreferrer noopener'}
+                        >
+                            <Arrow indent={'4.5rem'}>&rarr;&nbsp;</Arrow>
                             <Link color={'#79A3B1'}>resume.</Link>
                         </LinkContainer>
                     </LinksContainer>
