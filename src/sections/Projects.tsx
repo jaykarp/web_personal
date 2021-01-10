@@ -1,6 +1,7 @@
 import React, { forwardRef, useState } from 'react'
 import Collapse from '../components/Collapse'
 import ProjectCard from '../components/ProjectCard'
+import Shape from '../components/Shape'
 import {
     WidthManager,
     CollapseContainer,
@@ -46,6 +47,41 @@ const Projects = forwardRef<HTMLDivElement>((props: Props, ref) => {
         <>
             <WidthManager>
                 <ProjectsContainer ref={ref}>
+                    <Shape
+                        shape={'circle'}
+                        size={'5rem'}
+                        rotation={'199deg'}
+                        top={'2rem'}
+                        left={'-25%'}
+                    />
+                    <Shape
+                        shape={'hexagon'}
+                        size={'4rem'}
+                        rotation={'55deg'}
+                        top={'13rem'}
+                        left={'18%'}
+                    />
+                    <Shape
+                        shape={'square'}
+                        size={'5rem'}
+                        rotation={'340deg'}
+                        top={'15rem'}
+                        left={'-18%'}
+                    />
+                    <Shape
+                        shape={'pentagon'}
+                        size={'6rem'}
+                        rotation={'44deg'}
+                        top={'100%'}
+                        left={'-40%'}
+                    />
+                    <Shape
+                        shape={'circle'}
+                        size={'6rem'}
+                        rotation={'44deg'}
+                        top={'80%'}
+                        left={'35%'}
+                    />
                     <ProjectsHeader>Projects</ProjectsHeader>
                     <ProjectCardContainer>
                         <ProjectCard

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import circle from '../assets/shapes/circle.svg'
 import hexagon from '../assets/shapes/hexagon.svg'
 import pentagon from '../assets/shapes/pentagon.svg'
@@ -70,4 +70,4 @@ const Shape = ({ shape, size, rotation, top, left }: Props) => {
     }
 }
 
-export default Shape
+export default memo(Shape)

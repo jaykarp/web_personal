@@ -9,7 +9,6 @@ export const WidthManager = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
 `
 
 export const ConnectContainer = styled.div`
@@ -18,7 +17,7 @@ export const ConnectContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin: 3rem 0 7rem 0;
-    z-index: 100;
+    position: relative;
 `
 
 export const ConnectHeader = styled.div`
@@ -37,10 +36,12 @@ export const ConnectHeader = styled.div`
     `}
     margin-left: 5rem;
     margin-bottom: 2rem;
+    z-index: 100;
 `
 
 export const ContentContainer = styled.div`
     display: flex;
+    z-index: 100;
 `
 
 export const LinksContainer = styled.div`

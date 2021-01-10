@@ -1,17 +1,10 @@
 import styled from 'styled-components/macro'
 
 export const WidthManager = styled.div`
-    /* background: ${({
-        theme: {
-            colors: { white },
-        },
-    }) => white}; */
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: -22rem;
-    z-index: 1;
-    position: relative;
 `
 
 export const ProjectsContainer = styled.div`
@@ -23,6 +16,7 @@ export const ProjectsContainer = styled.div`
     margin: 4rem 0;
     width: 100%;
     max-width: 1200px;
+    position: relative;
 `
 
 export const ProjectCardContainer = styled.div`
@@ -30,6 +24,7 @@ export const ProjectCardContainer = styled.div`
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
+    z-index: 100;
 `
 
 export const ProjectsHeader = styled.div`
@@ -44,12 +39,14 @@ export const ProjectsHeader = styled.div`
         font-family: ${family};
         font-size: ${large};
     `}
+    z-index: 100;
 `
 export const CollapseContainer = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
     margin: 0 6rem;
+    z-index: 100;
 `
 
 export const ProjectSpacer = styled.div`
@@ -60,7 +57,7 @@ export const ProjectSpacer = styled.div`
     }) => `
         background: ${white}; 
     `}
-    z-index: 0;
+    z-index: 1;
     width: 150%;
     height: 34rem;
     border-radius: 50%;

@@ -1,5 +1,6 @@
 import React, { forwardRef } from 'react'
 import hs from '../assets/headshot2.svg'
+import Shape from '../components/Shape'
 import {
     ConnectContainer,
     ConnectHeader,
@@ -19,6 +20,13 @@ const Connect = forwardRef<HTMLDivElement>((props: Props, ref) => {
     return (
         <WidthManager>
             <ConnectContainer ref={ref}>
+                <Shape
+                    shape={'hexagon'}
+                    size={'6rem'}
+                    rotation={'20deg'}
+                    top={'80%'}
+                    left={'-30%'}
+                />
                 <ConnectHeader> Connect </ConnectHeader>
                 <ContentContainer>
                     <LinksContainer>
