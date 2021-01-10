@@ -61,6 +61,7 @@ const Experience = forwardRef<HTMLDivElement>((props: Props, ref) => {
                         rotation={'150deg'}
                         top={'97%'}
                         left={'0%'}
+                        xleft={'41%'}
                     />
                     <ExperienceHeader>Experience</ExperienceHeader>
                     <Job

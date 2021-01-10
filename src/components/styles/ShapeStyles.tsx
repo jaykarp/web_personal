@@ -16,17 +16,23 @@ type ShapeProps = {
     rotation: string
     top: string
     left: string
+    xtop: string
+    xleft: string
     size: string
 }
 
 export const StyledShape = styled.img<ShapeProps>`
-    ${({ rotation, top, left, size }) => css`
+    ${({ rotation, top, left, xtop, xleft, size }) => css`
         top: ${top};
         left: ${left};
         transform: rotate(${rotation});
         height: ${size};
         animation: ${() => move(rotation, Math.random() * 3 + 5)}
             ${Math.random() * 2 + 3}s ease-in-out infinite;
+        @media (max-width: 768px) {
+            top ${xtop};
+            left ${xleft};
+        }
     `}
     will-change: transform;
     position: absolute;

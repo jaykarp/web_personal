@@ -1,11 +1,5 @@
 import styled from 'styled-components/macro'
 
-export const CardContainer = styled.div`
-    display: flex;
-    width: 100%;
-    justify-content: center;
-`
-
 export const Card = styled.div`
     ${({
         theme: {
@@ -25,6 +19,12 @@ export const Card = styled.div`
     width: 100%;
     min-width: 170px;
     max-width: 270px;
+`
+
+export const CardContainer = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: center;
 `
 
 export const CardHeader = styled.div`

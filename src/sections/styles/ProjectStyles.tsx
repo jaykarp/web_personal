@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro'
+import { CardContainer } from '../../components/styles/ProjectCardStyles'
 
 export const WidthManager = styled.div`
     width: 100%;
@@ -15,16 +16,26 @@ export const ProjectsContainer = styled.div`
     padding: 0 3rem;
     margin: 4rem 0;
     width: 100%;
-    max-width: 1200px;
     position: relative;
+    max-width: 1000px;
 `
 
 export const ProjectCardContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    width: 100%;
+    width: 95vw;
     z-index: 100;
+    max-width: 1000px;
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        ${CardContainer}:nth-child(odd) {
+            margin-right: 20%;
+        }
+        ${CardContainer}:nth-child(even) {
+            margin-left: 20%;
+        }
+    }
 `
 
 export const ProjectsHeader = styled.div`
