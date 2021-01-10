@@ -9,7 +9,6 @@ export const WidthManager = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
 `
 
 export const AboutContainer = styled.div`
@@ -18,6 +17,7 @@ export const AboutContainer = styled.div`
     padding: 20px 0;
     display: flex;
     margin: 1rem 0 -8.125rem 0;
+    position: relative;
 `
 
 export const CloudContainer = styled.div`
@@ -25,6 +25,7 @@ export const CloudContainer = styled.div`
     align-items: center;
     justify-content: flex-end;
     flex: 1 1 0;
+    z-index: 100;
 `
 
 export const TextContainer = styled.div`
@@ -32,6 +33,7 @@ export const TextContainer = styled.div`
     align-items: center;
     justify-content: center;
     flex: 1.5 1 0;
+    z-index: 100;
 `
 
 export const AboutText = styled.div`

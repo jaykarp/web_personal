@@ -1,4 +1,5 @@
 import React, { forwardRef } from 'react'
+import Shape from '../components/Shape'
 import {
     WidthManager,
     SkillsContainer,
@@ -24,12 +25,59 @@ import {
     LRContainer,
 } from './styles/SkillsStyles'
 
-interface Props {}
-
-const Skills = forwardRef<HTMLDivElement>((props, ref) => {
+const Skills = forwardRef<HTMLDivElement>((_, ref) => {
     return (
         <WidthManager>
             <SkillsContainer ref={ref}>
+                <Shape
+                    shape={'circle'}
+                    size={'5rem'}
+                    rotation={'120deg'}
+                    top={'12%'}
+                    left={'-28%'}
+                />
+                <Shape
+                    shape={'square'}
+                    size={'6rem'}
+                    rotation={'250deg'}
+                    top={'12%'}
+                    left={'20%'}
+                />
+                <Shape
+                    shape={'square'}
+                    size={'4rem'}
+                    rotation={'20deg'}
+                    top={'40%'}
+                    left={'-10%'}
+                />
+                <Shape
+                    shape={'circle'}
+                    size={'5rem'}
+                    rotation={'290deg'}
+                    top={'50%'}
+                    left={'20%'}
+                />
+                <Shape
+                    shape={'triangle'}
+                    size={'3rem'}
+                    rotation={'10deg'}
+                    top={'55%'}
+                    left={'2%'}
+                />
+                <Shape
+                    shape={'pentagon'}
+                    size={'6rem'}
+                    rotation={'165deg'}
+                    top={'75%'}
+                    left={'-20%'}
+                />
+                <Shape
+                    shape={'hexagon'}
+                    size={'5rem'}
+                    rotation={'207deg'}
+                    top={'80%'}
+                    left={'20%'}
+                />
                 <SkillsGrid>
                     <GridHeader>
                         <Header>Skills</Header>

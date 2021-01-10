@@ -9,10 +9,10 @@ export const WidthManager = styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
-    position: relative;
 `
 
 export const IntroContainer = styled.div`
+    position: relative;
     width: 100%;
     max-width: 1200px;
     height: calc(100vh - 4.2rem);
@@ -20,7 +20,6 @@ export const IntroContainer = styled.div`
     min-height: 400px;
     display: flex;
     justify-content: center;
-    z-index: 100;
 `
 
 export const IntroTextContainer = styled.div`
@@ -28,6 +27,7 @@ export const IntroTextContainer = styled.div`
     flex: 1;
     align-items: center;
     justify-content: center;
+    z-index: 100;
 `
 
 export const IntroImgContainer = styled.div`
@@ -35,6 +35,7 @@ export const IntroImgContainer = styled.div`
     flex: 1;
     align-items: center;
     justify-content: flex-start;
+    z-index: 100;
 `
 
 export const IntroImg = styled.img`

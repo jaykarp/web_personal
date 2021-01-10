@@ -11,6 +11,7 @@ import {
     ExperienceContainer,
     ExperienceSpacer,
 } from './styles/ExperienceStyles'
+import Shape from '../components/Shape'
 
 interface Props {}
 
@@ -19,6 +20,48 @@ const Experience = forwardRef<HTMLDivElement>((props: Props, ref) => {
         <>
             <WidthManager>
                 <ExperienceContainer ref={ref}>
+                    <Shape
+                        shape={'triangle'}
+                        size={'4rem'}
+                        rotation={'40deg'}
+                        top={'4%'}
+                        left={'30%'}
+                    />
+                    <Shape
+                        shape={'circle'}
+                        size={'5rem'}
+                        rotation={'256deg'}
+                        top={'25%'}
+                        left={'-3%'}
+                    />
+                    <Shape
+                        shape={'square'}
+                        size={'4rem'}
+                        rotation={'135deg'}
+                        top={'47%'}
+                        left={'-20%'}
+                    />
+                    <Shape
+                        shape={'pentagon'}
+                        size={'5rem'}
+                        rotation={'345deg'}
+                        top={'54%'}
+                        left={'20%'}
+                    />
+                    <Shape
+                        shape={'circle'}
+                        size={'6rem'}
+                        rotation={'75deg'}
+                        top={'72%'}
+                        left={'15%'}
+                    />
+                    <Shape
+                        shape={'square'}
+                        size={'4rem'}
+                        rotation={'150deg'}
+                        top={'97%'}
+                        left={'0%'}
+                    />
                     <ExperienceHeader>Experience</ExperienceHeader>
                     <Job
                         title={'ceal.'}

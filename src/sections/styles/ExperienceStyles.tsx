@@ -11,7 +11,6 @@ export const WidthManager = styled.div`
     justify-content: center;
     border-top-left-radius: 50rem 5rem;
     border-top-right-radius: 50rem 15rem;
-    position: relative;
 `
 
 export const ExperienceContainer = styled.div`
@@ -27,6 +26,7 @@ export const ExperienceContainer = styled.div`
     margin: 4rem 0;
     width: 100vw;
     max-width: 1200px;
+    position: relative;
 `
 
 export const ExperienceHeader = styled.div`

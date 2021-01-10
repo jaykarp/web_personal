@@ -16,28 +16,28 @@ interface Props {}
 const Intro = (props: Props) => {
     return (
         <WidthManager>
-            <Shape
-                shape={'pentagon'}
-                size={'6rem'}
-                rotation={'25deg'}
-                top={'5%'}
-                left={'-35%'}
-            />
-            <Shape
-                shape={'circle'}
-                size={'6rem'}
-                rotation={'75deg'}
-                top={'65%'}
-                left={'2%'}
-            />
-            <Shape
-                shape={'square'}
-                size={'6rem'}
-                rotation={'30deg'}
-                top={'75%'}
-                left={'-30%'}
-            />
             <IntroContainer>
+                <Shape
+                    shape={'pentagon'}
+                    size={'6rem'}
+                    rotation={'25deg'}
+                    top={'5%'}
+                    left={'-35%'}
+                />
+                <Shape
+                    shape={'circle'}
+                    size={'6rem'}
+                    rotation={'75deg'}
+                    top={'65%'}
+                    left={'2%'}
+                />
+                <Shape
+                    shape={'square'}
+                    size={'6rem'}
+                    rotation={'30deg'}
+                    top={'75%'}
+                    left={'-30%'}
+                />
                 <IntroTextContainer>
                     <IntroText>Hi, I'm</IntroText>
                     <IntroTextAccent>&nbsp;Jay.</IntroTextAccent>

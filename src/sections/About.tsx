@@ -9,6 +9,7 @@ import {
     AboutSpacer,
 } from './styles/AboutStyles'
 import cloud from '../assets/wordcloud_square.png'
+import Shape from '../components/Shape'
 
 interface Props {}
 
@@ -17,6 +18,13 @@ const About = (props: Props) => {
         <>
             <WidthManager>
                 <AboutContainer>
+                    <Shape
+                        shape={'triangle'}
+                        size={'4rem'}
+                        rotation={'75deg'}
+                        top={'90%'}
+                        left={'30%'}
+                    />
                     <CloudContainer>
                         <CloudImg src={cloud} />
                     </CloudContainer>

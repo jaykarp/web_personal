@@ -10,7 +10,6 @@ export const WidthManager = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 3rem;
-    position: relative;
 `
 
 export const SkillsContainer = styled.div`
@@ -18,9 +17,11 @@ export const SkillsContainer = styled.div`
     max-width: 1200px;
     display: flex;
     justify-content: center;
+    position: relative;
 `
 
 export const SkillsGrid = styled.div`
+    z-index: 100;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.4fr 1fr 1fr;
