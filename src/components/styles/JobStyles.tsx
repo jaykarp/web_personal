@@ -27,7 +27,7 @@ export const JobHeader = styled.div<JobProps>`
         font-family: ${family};
         font-size: ${medium};
     `}
-    margin: 0 3rem 0.5rem 3rem;
+    margin: 0.5rem 3rem 0.5rem 3rem;
 `
 
 export const JobImgContainer = styled.div<JobProps>`

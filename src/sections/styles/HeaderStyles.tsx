@@ -20,6 +20,13 @@ export const HamburgerContainer = styled.div`
 `
 
 export const Filler = styled.div`
+    ${({
+        theme: {
+            colors: { background },
+        },
+    }) => css`
+        background: ${background};
+    `};
     width: 100%;
     height: 4.2rem;
 `

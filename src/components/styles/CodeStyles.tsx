@@ -11,13 +11,12 @@ SyntaxHighlighter.registerLanguage('haskell', haskell)
 export const StyledCode = styled(SyntaxHighlighter)`
     background: ${({ color }) => color} !important;
     color: rgb(256, 256, 256) !important;
-    font-size: 0.5rem !imporant;
+    font-size: 0.5rem !important;
     overflow: hidden !important;
     margin: 0px !important;
     border-radius: 0 0 1rem 1rem !important;
     padding: 1rem !important;
     display: flex;
-    justify-content: center;
 `
 
 export const CodeContainer = styled.div`

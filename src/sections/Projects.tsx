@@ -125,7 +125,7 @@ const Projects = forwardRef<HTMLDivElement>((props: Props, ref) => {
                         <ProjectCard
                             title={'par-sort.'}
                             description={
-                                'parallel functional sorinting implementations in haskell'
+                                'parallel functional sorting implementations in haskell'
                             }
                             code={parsort_code}
                             language={'haskell'}

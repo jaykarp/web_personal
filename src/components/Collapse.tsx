@@ -177,7 +177,7 @@ const Collapse = ({ open, setOpen }: Props, ref: any) => {
                             justo ut dapibus pharetra.
                         </CollapseDescription>
                         <LanguagesContainer>
-                            REACT.JAVASCRIPT.REDUX.BALSAMIQ.FIGMA
+                            GOLANG.PYTHON.BASH
                         </LanguagesContainer>
                     </DescriptionContainer>
                 </CollapseWrapper>

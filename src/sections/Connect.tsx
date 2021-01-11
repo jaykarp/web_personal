@@ -17,9 +17,8 @@ import { WidthManager } from './styles/ConnectStyles'
 interface Props {}
 
 const Connect = forwardRef<HTMLDivElement>((props: Props, ref) => {
-    const email = `amxrMjIyNUBjb2x1bWJpYS5lZHU=`
-
     useEffect(() => {
+        const email = `amxrMjIyNUBjb2x1bWJpYS5lZHU=`
         const links = document.querySelectorAll<HTMLElement>(
             `[data-gen='email']`
         )
@@ -36,6 +35,14 @@ const Connect = forwardRef<HTMLDivElement>((props: Props, ref) => {
     return (
         <WidthManager>
             <ConnectContainer ref={ref}>
+                <Shape
+                    shape={'triangle'}
+                    size={'3rem'}
+                    rotation={'200deg'}
+                    top={'60%'}
+                    left={'35%'}
+                    xleft={'50%'}
+                />
                 <Shape
                     shape={'hexagon'}
                     size={'6rem'}
