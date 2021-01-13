@@ -30,15 +30,17 @@ const About = (props: Props) => {
                     </CloudContainer>
                     <TextContainer>
                         <AboutText>
-                            I’m a computer scientist, who loves Lorem ipsum
-                            dolor sit amet, consectetur adipiscing elit. Duis
-                            non venenatis justo. Proin tellus tortor, venenatis
-                            in ipsum vestibulum, posuere ultricies risus.
-                            Pellentesque lobortis, leo non viverra vestibulum,
-                            metus velit pulvinar sapien, non suscipit massa odio
-                            quis nisl. Curabitur vulputate tellus vitae tortor
-                            vestibulum, et accumsan leo laoreet. Nam id est sit
-                            amet nunc rutrum convallis.
+                            I’m a masters’ student pursuing a MS in Computer
+                            Science at Columbia University. My interests span
+                            the full product development process, from user
+                            research and prototyping to system implementation
+                            and design. When I’m not programming, you can find
+                            me playing saxophone and piano or baking fresh
+                            bread. I’m currently looking for internship
+                            positions for summer 2021. Check out some of my
+                            projects below - including the website itself! And
+                            please contact me with any questions or
+                            opportunities.
                         </AboutText>
                     </TextContainer>
                 </AboutContainer>

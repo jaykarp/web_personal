@@ -16,6 +16,9 @@ export const CollapseContainer = styled.div`
     display: grid;
     width: 75vw;
     max-width: 1000px;
+    @media (max-width: 800px) {
+        width: 90vw;
+    }
 `
 
 export const Coll = styled(_Collapse)`

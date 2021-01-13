@@ -60,29 +60,24 @@ const Collapse = ({ open, setOpen }: Props, ref: any) => {
                     </HeaderContainer>
                     <DescriptionContainer>
                         <CollapseDescription>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Duis non venenatis justo. Proin tellus tortor,
-                            venenatis in ipsum vestibulum, posuere ultricies
-                            risus. Pellentesque lobortis, leo non viverra
-                            vestibulum, metus velit pulvinar sapien, non
-                            suscipit massa odio quis nisl. Curabitur vulputate
-                            tellus vitae tortor vestibulum, et accumsan leo
-                            laoreet. Nam id est sit amet nunc rutrum convallis.
-                            Class aptent taciti sociosqu ad litora torquent per
-                            conubia nostra, per inceptos himenaeos. Proin sapien
-                            purus, sagittis nec elementum vitae, suscipit sed
-                            erat.
-                            <br />
-                            Aenean elementum finibus mi sed pretium. Sed eu
-                            libero eget velit lobortis feugiat eu id orci. Nam
-                            nec venenatis mauris, eu viverra sapien. Nullam
-                            vehicula, arcu sed pulvinar tempor, odio tortor
-                            gravida justo, non feugiat arcu felis id risus.
-                            Mauris facilisis venenatis libero sed accumsan.
-                            Proin pellentesque ex sit amet mi tempus mattis.
-                            Nunc vel faucibus nunc. Integer a erat ut ante
-                            blandit vehicula non vitae ipsum. Vivamus semper
-                            justo ut dapibus pharetra.
+                            In fall of 2019, I worked Musely: a musical
+                            note-taking app. Our initial user studies exploring
+                            pain points for music students revealed a difficulty
+                            recording information about music - especially when
+                            those notes were tied to a certain time in the
+                            piece. Previously, a student would need to write
+                            down a timeframe and musical description (eg:
+                            adagio) and later match it to the piece. This
+                            written description was very difficult for students
+                            to relate to a piece of music, especially in
+                            remembering how the verbal notes related to the
+                            music without re-listening. Our solution integrates
+                            the music and the annotations in the same interface,
+                            no longer a separate audio file and paper time
+                            markings. We built a prototype that enabled students
+                            to notate as they listened to the music, and to see
+                            a visual representation of their notes overlaid on
+                            the audio file.
                         </CollapseDescription>
                         <LanguagesContainer>
                             REACT.JAVASCRIPT.REDUX.BALSAMIQ.FIGMA
@@ -106,29 +101,25 @@ const Collapse = ({ open, setOpen }: Props, ref: any) => {
                     </HeaderContainer>
                     <DescriptionContainer>
                         <CollapseDescription>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Duis non venenatis justo. Proin tellus tortor,
-                            venenatis in ipsum vestibulum, posuere ultricies
-                            risus. Pellentesque lobortis, leo non viverra
-                            vestibulum, metus velit pulvinar sapien, non
-                            suscipit massa odio quis nisl. Curabitur vulputate
-                            tellus vitae tortor vestibulum, et accumsan leo
-                            laoreet. Nam id est sit amet nunc rutrum convallis.
-                            Class aptent taciti sociosqu ad litora torquent per
-                            conubia nostra, per inceptos himenaeos. Proin sapien
-                            purus, sagittis nec elementum vitae, suscipit sed
-                            erat.
-                            <br />
-                            Aenean elementum finibus mi sed pretium. Sed eu
-                            libero eget velit lobortis feugiat eu id orci. Nam
-                            nec venenatis mauris, eu viverra sapien. Nullam
-                            vehicula, arcu sed pulvinar tempor, odio tortor
-                            gravida justo, non feugiat arcu felis id risus.
-                            Mauris facilisis venenatis libero sed accumsan.
-                            Proin pellentesque ex sit amet mi tempus mattis.
-                            Nunc vel faucibus nunc. Integer a erat ut ante
-                            blandit vehicula non vitae ipsum. Vivamus semper
-                            justo ut dapibus pharetra.
+                            Through this project, we aimed to explore the
+                            possibilities of parallel sorting in a functional
+                            language. With the possibile slowing of Moore’s law
+                            in the near future, it is essential that we look at
+                            alternative methods to push these important
+                            algorithms even further. In our research, we
+                            implemented three main sorting algorithms using
+                            Haskell: merge sort, quicksort, andbitonic sort.
+                            Although it would probably be faster to write these
+                            sorts in a lower level language like C, we believe
+                            that the functional paradigm allows for much easier
+                            and more concise data parallelism. After moving
+                            these three main sorts from their equivalent
+                            sequential and imperative counterparts, we further
+                            pushed the limits of sorting in Haskell to implement
+                            some of the different data parallelism models.
+                            Finally, we present ‘hybrid’ sort, which is composed
+                            of the best features from all of the sequential, and
+                            parallel sorts that we implemented.
                         </CollapseDescription>
                         <LanguagesContainer>
                             HASKELL.STACK.THREADSCOPE
@@ -152,29 +143,32 @@ const Collapse = ({ open, setOpen }: Props, ref: any) => {
                     </HeaderContainer>
                     <DescriptionContainer>
                         <CollapseDescription>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Duis non venenatis justo. Proin tellus tortor,
-                            venenatis in ipsum vestibulum, posuere ultricies
-                            risus. Pellentesque lobortis, leo non viverra
-                            vestibulum, metus velit pulvinar sapien, non
-                            suscipit massa odio quis nisl. Curabitur vulputate
-                            tellus vitae tortor vestibulum, et accumsan leo
-                            laoreet. Nam id est sit amet nunc rutrum convallis.
-                            Class aptent taciti sociosqu ad litora torquent per
-                            conubia nostra, per inceptos himenaeos. Proin sapien
-                            purus, sagittis nec elementum vitae, suscipit sed
-                            erat.
-                            <br />
-                            Aenean elementum finibus mi sed pretium. Sed eu
-                            libero eget velit lobortis feugiat eu id orci. Nam
-                            nec venenatis mauris, eu viverra sapien. Nullam
-                            vehicula, arcu sed pulvinar tempor, odio tortor
-                            gravida justo, non feugiat arcu felis id risus.
-                            Mauris facilisis venenatis libero sed accumsan.
-                            Proin pellentesque ex sit amet mi tempus mattis.
-                            Nunc vel faucibus nunc. Integer a erat ut ante
-                            blandit vehicula non vitae ipsum. Vivamus semper
-                            justo ut dapibus pharetra.
+                            When we build a distributed system, we check if it
+                            works properly in all cases, even some very low
+                            probability corner cases. For this project we aim to
+                            prove the correctness of an implementation of paxos.
+                            We evaluated two different methods: model checking
+                            and fuzz testing. Fuzz testing occurs when you
+                            repeatedly test multiple different randomly
+                            occurring states, and is efficient in practice.
+                            However, there is no guarantee that this randomized
+                            testing can cover every case. Instead we pursued the
+                            Model checking approach, exploring every
+                            possibility, potentially achieved by simulating a
+                            system by a state machine. Then search algorithms
+                            like Breadth First Search (BFS) or Depth First
+                            Search (DFS) can be used to walk through all the
+                            states and verify the correctness of one's
+                            implementation. In this assignment, we considered
+                            the whole system (nodes + network) as one large
+                            state machine. Each node represented a client or
+                            server that could send or receive messages. The
+                            network represented an abstraction of on-the-fly
+                            messages being transferred over a real network. We
+                            first implemented the state machine as well as the
+                            different state transitions. We finally wrote our
+                            model checking tests, and verified that our solution
+                            was viable, successfully modeling paxos.
                         </CollapseDescription>
                         <LanguagesContainer>
                             GOLANG.PYTHON.BASH

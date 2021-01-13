@@ -27,7 +27,7 @@ export const StyledShape = styled.img<ShapeProps>`
         left: ${left};
         transform: rotate(${rotation});
         height: ${size};
-        animation: ${() => move(rotation, Math.random() * 3 + 5)}
+        animation: ${() => move(rotation, Math.random() * 3 + 7)}
             ${Math.random() * 2 + 3}s ease-in-out infinite;
         @media (max-width: 768px) {
             top ${xtop};
