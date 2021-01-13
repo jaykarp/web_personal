@@ -42,6 +42,9 @@ export const ConnectHeader = styled.div`
 export const ContentContainer = styled.div`
     display: flex;
     z-index: 100;
+    @media (max-width: 450px) {
+        flex-direction: column-reverse;
+    }
 `
 
 export const LinksContainer = styled.div`
@@ -49,6 +52,9 @@ export const LinksContainer = styled.div`
     flex-direction: column;
     flex: 1;
     justify-content: center;
+    @media (max-width: 450px) {
+        align-self: center;
+    }
 `
 
 export const LinkContainer = styled.a`
@@ -74,6 +80,9 @@ export const LinkContainer = styled.a`
     will-change: transform;
     &:hover {
         transform: translateX(2px);
+    }
+    @media (max-width: 450px) {
+        padding-left: 0;
     }
 `
 
@@ -101,6 +110,9 @@ export const HeadshotContainer = styled.div`
     flex: 1;
     justify-content: flex-start;
     margin-left: 1rem;
+    @media (max-width: 450px) {
+        justify-content: center;
+    }
 `
 
 export const Headshot = styled.img`
