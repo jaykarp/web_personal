@@ -68,7 +68,7 @@ const Experience = forwardRef<HTMLDivElement>((props: Props, ref) => {
                         title={'ceal.'}
                         logo={ceal}
                         description={
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non venenatis justo. Proin tellus tortor, venenatis in ipsum vestibulum, posuere ultricies risus. Pellentesque lobortis, leo non viverra vestibulum, metus velit pulvinar sapien, non suscipit massa odio quis nisl. Curabitur vulputate tellus vitae tortor vestibulum, et accumsan leo laoreet. Nam id est sit amet nunc rutrum convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. '
+                            'CEAL (Columbia Computer Enabled Abilities Lab) is an interdisciplinary lab enabling those with differing abilities to experience the world. Our research spans accessibility, games, AR, AI, sensing and vision. Our website serves dual purposes: recruiting researchers to grow the lab and enrolling those with differing abilities in our studies. We want to ensure our lab’s interface is reflective of the participants we work with, as typical media connections sometimes rely on inaccessible audio or visual communication. My contributions to this website spanned the entire development process, ranging from early prototyping and design to implementation. We expect to be live at the end of January 2021.'
                         }
                         languages={['HTML', 'CSS', 'JAVASCRIPT', 'PYTHON']}
                         tags={['UI & UX', 'Fullstack Dev']}
@@ -78,7 +78,7 @@ const Experience = forwardRef<HTMLDivElement>((props: Props, ref) => {
                         title={'navstick.'}
                         logo={navstick}
                         description={
-                            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis non venenatis justo. Proin tellus tortor, venenatis in ipsum vestibulum, posuere ultricies risus. Pellentesque lobortis, leo non viverra vestibulum, metus velit pulvinar sapien, non suscipit massa odio quis nisl. Curabitur vulputate tellus vitae tortor vestibulum, et accumsan leo laoreet. Nam id est sit amet nunc rutrum convallis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. '
+                            'Navstick is a CEAL lab project exploring accessibility for people with visual impairments. Using self-directed audio navigation, we aim to encourage autonomous shopping. Existing supermarket navigation solutions are cumbersome, and ours allows users to explore the shelves through self-directed verbalization of the environment. We created a supermarket simulator game for our virtual testing environment and a remote user research framework. During the course of the project, I ran 15 user studies over Zoom, built web interfaces to control the game environment remotely, and built the database/backend design to enable communication during testing. Upon the completion of our prototype, testing, and evaluation, we submitted two papers to UIST and CHI. The lab is further refining phases based on our findings.'
                         }
                         languages={[
                             'REACT',

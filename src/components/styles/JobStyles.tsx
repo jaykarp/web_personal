@@ -1,4 +1,4 @@
-import styled from 'styled-components/macro'
+import styled, { css } from 'styled-components/macro'
 
 type JobProps = {
     isLeft: boolean
@@ -12,6 +12,7 @@ export const JobContainer = styled.div<JobProps>`
     margin: 2rem 6rem;
     @media (max-width: 768px) {
         flex-direction: column;
+        margin: 2rem 2rem;
     }
 `
 
@@ -31,15 +32,18 @@ export const JobHeader = styled.div<JobProps>`
 `
 
 export const JobImgContainer = styled.div<JobProps>`
-    ${({ isLeft }) => `
-        justify-content: ${isLeft ? 'flex-end' : 'flex-start'}; 
+    ${({ isLeft }) => css`
+        justify-content: ${isLeft ? 'flex-end' : 'flex-start'};
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
     `}
     display: flex;
     align-items: center;
     flex: 1 1 auto;
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         justify-content: center;
-    }
+    } */
 `
 
 export const JobImgBackground = styled.div<JobProps>`
@@ -87,10 +91,10 @@ export const JobDescription = styled.div`
                 small,
             },
         },
-    }) => `
+    }) => css`
         font-family: ${family};
-        font-size: ${small};
     `}
+    font-size: 1rem;
     margin: 1rem 0;
     text-align: justify;
     @media (max-width: 800px) {
